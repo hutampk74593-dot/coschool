@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김하원 학생의 금융일반 포트폴리오</title>
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font (Tailwind default) --><style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', 'Malgun Gothic', '맑은 고딕', sans-serif;
+            /* 배경색을 이미지 그라데이션으로 변경 */
+            background: linear-gradient(to bottom right, #3B82F6, #6D28D9, #A78BFA); /* Blue, Deep Purple, Lighter Purple */
+            background-attachment: fixed; /* 배경 스크롤 시 고정 */
+            scroll-behavior: smooth;
+            color: #333; /* 기본 텍스트 색상 어둡게 */
+        }
+        /* 기존 accent-bg는 헤더에 적용되므로, 이미지 색상 팔레트의 진한 색으로 지정 */
+        .accent-bg { background-color: #4a55dc; /* Deep Indigo/Blue */ }
+        .accent-text { color: #4a55dc; }
+        .accent-border { border-left-color: #4a55dc; }
+        
+        /* 섹션별 보더/텍스트 색상 (그라데이션 팔레트에서 추출) */
+        .section-1-border { border-top-color: #3b82f6; /* Blue */ }
+        .section-2-border { border-top-color: #6d28d9; /* Deep Purple */ }
+        .section-3-border { border-top-color: #a78bfa; /* Lighter Purple */ }
+        .section-4-border { border-top-color: #f59e0b; } /* New section color: Amber */
+        
+        /* 섹션 내부 배경은 하얀색으로 유지하여 가독성 확보 */
+        .bg-white { background-color: rgba(255, 255, 255, 0.9); } /* 섹션 배경 약간 투명하게 */
+        .section-1-bg, .section-2-bg, .section-3-bg, .section-4-bg { background-color: rgba(255, 255, 255, 0.85); } /* 내부 박스 배경도 투명도 */
+        
+        /* 텍스트 색상은 각 섹션의 강조색과 맞춤 */
+        .section-1-text { color: #3b82f6; }
+        .section-2-text { color: #6d28d9; }
+        .section-3-text { color: #a78bfa; }
+        .section-4-text { color: #f59e0b; } /* New section text color: Amber */
+
+
+        /* 버튼 스타일도 그라데이션 팔레트에 맞춤 */
+        .btn-blue {
+            background-color: #3b82f6; /* Blue */
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .btn-blue:hover { background-color: #2563eb; }
+
+        .btn-purple {
+            background-color: #6d28d9; /* Deep Purple */
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .btn-purple:hover { background-color: #5b21b6; }
+        
+        .btn-amber {
+            background-color: #f59e0b; /* Amber */
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .btn-amber:hover { background-color: #d97706; }
+        
+        /* 이전 챗봇 iframe 스타일 제거 */
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Hero Section --><header class="accent-bg text-white shadow-xl">
+        <div class="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center rounded-b-xl">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                부산대학교 교과연계형 <br> 금융일반 포트폴리오
+            </h1>
+            <h2 class="text-xl sm:text-2xl font-light mb-0">
+                대동고등학교 1학년 김하원
+            </h2>
+        </div>
+    </header>
+
+    <!-- Navigation Bar --><nav class="sticky top-0 bg-white shadow-lg z-10">
+        <div class="max-w-4xl mx-auto flex justify-center space-x-4 py-3 px-4 sm:px-6 lg:px-8">
+            <a href="dict.html" class="text-lg font-medium text-gray-600 hover:text-blue-600 transition duration-150 p-2 rounded-lg hover:bg-blue-50">
+                📖 금융 용어 사전
+            </a>
+            <a href="#infographic" class="text-lg font-medium text-gray-600 hover:text-yellow-600 transition duration-150 p-2 rounded-lg hover:bg-yellow-50">
+                📈 인포그래픽
+            </a>
+            <a href="khw.pdf" target="_blank" class="text-lg font-medium text-gray-600 hover:text-purple-600 transition duration-150 p-2 rounded-lg hover:bg-purple-50">
+                ✨ 교과 핵심 정리
+            </a>
+            <a href="#reflection" class="text-lg font-medium text-gray-600 hover:text-indigo-600 transition duration-150 p-2 rounded-lg hover:bg-indigo-50">
+                소감
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section 1: 금융 용어 심화 사전 (Financial Glossary) - Blue Tone --><section id="dictionary" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 border-t-4 section-1-border">
+            <h3 class="text-3xl font-bold mb-6 pb-2 border-b-2 section-1-text">
+                📖 금융 용어 심화 사전
+            </h3>
+            <p class="mb-6 text-gray-600">
+                부산대학교 수업에서 배운 핵심 이론 및 분석에 사용되는 학문적 용어를 중심으로 정리했습니다.
+            </p>
+
+            <div class="section-1-bg p-6 rounded-lg text-center">
+                <p class="text-gray-700 mb-4">
+                    총 15개의 심화 금융 용어에 대한 학문적 정의와 수강 후 해석을 상세히 담았습니다.
+                </p>
+                <a href="dict.html" class="inline-block btn-blue">
+                    전체 용어 사전 보기 (dict.html)
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 4: 인포그래픽 자료 (Infographic) - Amber Tone (NEW SECTION) --><section id="infographic" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 border-t-4 section-4-border">
+            <h3 class="text-3xl font-bold mb-6 pb-2 border-b-2 section-4-text">
+                📈 인포그래픽 자료: 금융 트렌드 분석
+            </h3>
+            <p class="mb-6 text-gray-600 font-medium">
+                부산대학교 연계 수업 자료와 개인적인 분석을 바탕으로 제작한 금융 및 핀테크 트렌드 관련 인포그래픽 자료입니다.
+            </p>
+
+            <div class="section-4-bg p-6 rounded-lg text-center">
+                <p class="text-gray-700 mb-4">
+                    AI, ESG, 웹 3.0 등 미래 금융 트렌드를 시각적으로 정리한 자료를 확인하세요.
+                </p>
+                <a href="https://gemini.google.com/share/5de2086cd822" target="_blank" class="inline-block btn-amber">
+                    인포그래픽 자료 바로가기 (새 창)
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: 교과 핵심 정리 (Core Curriculum Summary) - Purple Tone --><section id="summary" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 border-t-4 section-2-border">
+            <h3 class="text-3xl font-bold mb-6 pb-2 border-b-2 section-2-text">
+                ✨ 교과 핵심 정리: 핀테크와 4차 산업혁명 시대의 통찰
+            </h3>
+            <p class="mb-6 text-gray-600 font-medium">
+                부산대학교 교과 연계 수업의 핵심 브리핑 문서 요약입니다. 금융과 기술의 융복합 현상, 데이터 경제, 그리고 미래 경영 전략을 중심으로 학습했습니다.
+            </p>
+
+            <div class="space-y-8">
+                <!-- Topic 1: Executive Summary based on PDF --><div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900 border-l-4 section-2-text pl-3">
+                        I. Executive Summary: 금융과 기술의 융복합
+                    </h4>
+                    <p class="leading-relaxed text-gray-700 section-2-bg p-4 rounded-lg">
+                        금융 산업은 AI, 빅데이터 등 4차 산업혁명 핵심 기술에 의해 근본적인 변혁을 겪고 있습니다. 핀테크/테크핀의 등장은 간편결제, 로보어드바이저 등 혁신 모델을 탄생시켰습니다. 기업의 목표는 이익을 넘어 사회적 가치 창출(ESG)로 확장되며, 디지털 전환은 생존의 문제임을 강조합니다.
+                    </p>
+                </div>
+
+                <!-- Topic 2: Chapter 1 & 2 combined --><div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900 border-l-4 section-2-text pl-3">
+                        II. 4차 산업혁명, 핀테크, 그리고 데이터 경제의 도래
+                    </h4>
+                    <p class="leading-relaxed text-gray-700 section-2-bg p-4 rounded-lg">
+                        4차 산업혁명은 초연결 사회(DNA: Data, Network, AI)를 구현합니다. 핀테크가 기존 금융에 IT를 접목했다면, 테크핀은 IT 기업이 금융을 주도하는 형태입니다. 핵심은 데이터이며, 빅데이터 5V(Volume, Velocity, Variety, Value, Variable) 이해와 개인에게 통제권을 부여하는 마이데이터 제도가 미래 금융 경쟁력의 핵심입니다.
+                    </p>
+                </div>
+
+                <!-- Topic 3: Chapter 3 & 4 combined --><div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900 border-l-4 section-2-text pl-3">
+                        III. AI 융합, ESG, 그리고 웹 3.0 시대
+                    </h4>
+                    <p class="leading-relaxed text-gray-700 section-2-bg p-4 rounded-lg">
+                        AI는 은행(신용평가, FDS), 증권(로보어드바이저), 보험(인슈어테크) 등 전 분야에 적용됩니다. ChatGPT와 같은 생성형 AI의 충격은 생산성을 혁신하고 있습니다. 경영 목표는 ESG로 재정의되며, 미래 인프라는 탈중앙화된 웹 3.0과 클라우드 컴퓨팅 위에서 구현될 것입니다.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 버튼 영역: 새 창 열기 및 다운로드 기능 명확히 지정 --><div class="section-2-bg p-6 rounded-xl text-center mt-8 border border-purple-300">
+                <p class="text-gray-700 mb-6 font-bold">
+                    브리핑 문서 원본을 통해 더욱 상세한 내용을 확인할 수 있습니다.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+                    <!-- 버튼 1: 교과 내용 요약 보기 (새 창에서 열기) --><a href="khw.pdf" target="_blank" class="inline-block btn-purple w-full sm:w-1/2">
+                        교과 내용 요약 보기
+                    </a>
+                    <!-- 버튼 2: 자료 다운로드 (다운로드 속성 추가) --><a href="khw.pdf" download="khw_자료.pdf" class="inline-block btn-purple w-full sm:w-1/2">
+                        브리핑 자료 다운로드
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 소감 (Reflection) - Lighter Purple Tone --><section id="reflection" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 section-3-border">
+            <h3 class="text-3xl font-bold mb-6 pb-2 border-b-2 section-3-text">
+                소감
+            </h3>
+            <div class="section-3-bg p-6 rounded-lg">
+                <p class="leading-relaxed text-gray-700 italic">
+                    부산대학교에서 참여했던 금융 일반 교과연계 프로그램은 처음에는 내용이 조금 어려워서 이해하는 데 시간이 걸렸어요. 하지만 강의와 활동을 통해 금융의 기본적인 개념과 원리를 차근차근 배울 수 있었고, 점차 흥미를 느낄 수 있었습니다. 프로그램을 마칠 즈음에는 처음보다 금융에 대해 훨씬 넓은 시야를 갖게 되었고, 어려웠지만 그만큼 유익하고 의미 있는 경험이었다고 생각합니다.
+                </p>
+                <p class="mt-4 text-right font-medium section-3-text">— 대동고등학교 김하원</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="mt-12 py-8 accent-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm">
+                &copy; 2025 김하원 금융일반 포트폴리오 | 대동고등학교 &amp; 부산대학교 연계 과정
+            </p>
+        </div>
+    </footer>
+    
+    <!-- 챗봇 바로가기 버튼 (새 창 열림) -->
+    <a href="https://share.chatling.ai/s/QipfggeiKEiU61H" target="_blank"
+        class="fixed bottom-6 right-6 z-50 p-3 sm:p-4 rounded-full shadow-2xl transition duration-300 ease-in-out bg-emerald-600 text-white hover:bg-emerald-700 transform hover:scale-105 flex items-center space-x-2"
+        title="포트폴리오 관련 챗봇 (새 창 열림)">
+        <span class="text-xl sm:text-2xl font-bold">💬</span>
+        <span class="text-base font-semibold hidden sm:inline-block">챗봇 문의</span>
+    </a>
+
+</body>
+</html>
